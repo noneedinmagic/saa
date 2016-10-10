@@ -1,0 +1,28 @@
+{
+  "name": "SAA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "browser-sync": "^2.16.0",
+    "css-mqpacker": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-postcss": "^6.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "vinyl-ftp": "^0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oleg",
+  "license": "ISC"
+}

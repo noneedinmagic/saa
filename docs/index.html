@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator - SAA</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.bootstrap-touchspin.min.css">
+	<link rel="stylesheet" href="css/saa.min.css">
+	<script src="javascript/jquery.min.js"></script>
+	<script src="javascript/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="javascript/elect-calc.js"></script>
+</head>
+<body>
+	<main class="container">
+		<h1>Калькулятор виборів керівника ВНЗ</h1>
+		
+		<div class="well">
+			<div class="input-group input-group-lg col-md-8 col-md-offset-2">
+				<!-- <label for="elect_teacher">Введіть кількість викладачів, що приймають участь у виборах</label> -->
+				<input name="elect_teacher" id="elect_teacher" value="">
+			</div>
+		
+			<script>
+			    $("input[name='elect_teacher']").TouchSpin({
+			        min: 1,
+			        max: 5000,
+			        // stepinterval: 50,
+			        maxboostedstep: 50,
+			        // prefix: '$'
+			        initval: 300,
+		            postfix: "Порахувати!",
+		            postfix_extraclass: "btn btn-success elect-calc",
+			    });
+			</script>
+		
+		<!-- 	<button id="elect_calc" class="btn btn-lg btn-success">
+				Порахувати!
+			</button> -->
+		</div>
+		
+		<div class="elect-quotas-wrap" style="display:none;">
+			<!-- <div class="panel-body"> -->
+				<table id="elect_quotas" class="table table-bordered table-hover">
+					<tbody>
+						<tr>
+							<td>Кількість викладачів</td>
+							<td><span id="quota-teachers"></span> викладачів</td>
+						</tr>
+						<tr>
+							<td>Кількість працівників</td>
+							<td>максимум <span id="quota-workers"></span> працівників</td>
+						</tr>
+						<tr>
+							<td>Кількість студентів</td>
+							<td>мінімум <span id="quota-students"></span> студентів</td>
+						</tr>
+					</tbody>
+				</table>
+			<!-- </div> -->
+			<div class="well">
+				* наведені значення справедливі для розподілу (75% + 10% + 15%). Для інших розподілів можливі інші значення.
+			</div>
+		</div>
+	</main>
+</body>
+</html>
