@@ -1,5 +1,5 @@
 ElectCalc = function(teachers){
-	this.teachers = teachers;
+	this.teachers = parseInt(teachers);
 
 	this.maxWorkers = Math.floor(teachers*0.1/0.75);
 	this.minStudents = Math.ceil(teachers*0.2);
@@ -12,6 +12,7 @@ $(document).ready(function(){
 		$('#quota-teachers').text(calc.teachers);
 		$('#quota-workers').text(calc.maxWorkers);
 		$('#quota-students').text(calc.minStudents);
+		$('#quota-total').text(calc.teachers + calc.maxWorkers + calc.minStudents);
 		$('.elect-quotas-wrap').slideDown();
 	});
 });
